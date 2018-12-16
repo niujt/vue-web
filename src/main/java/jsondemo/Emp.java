@@ -1,4 +1,4 @@
-package demo;
+package jsondemo;
 
 public class Emp {
     private String itemNo;
