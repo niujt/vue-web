@@ -24,8 +24,11 @@ public class CityController {
        return json;
     }
     @RequestMapping(value = "city",method = RequestMethod.POST)
-    public JSONObject addCity(){
+    public JSONObject addCity(City city){
         JSONObject json=new JSONObject();
+        if(service.addCity(city)>=0){
+            json.put(CommonStatus.CityStatus,CommonStatus.Success);
+        }
         return json;
     }
     @RequestMapping(value = "city",method = RequestMethod.PUT)
@@ -36,7 +39,6 @@ public class CityController {
 
        else
            json.put("CityStatus", CommonStatus.Error);
-
         return json;
     }
     @RequestMapping(value = "city/{id}",method = RequestMethod.DELETE)
