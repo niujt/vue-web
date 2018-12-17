@@ -5,10 +5,7 @@ import com.boot.Common.CommonStatus;
 import com.boot.entity.City;
 import com.boot.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,7 +29,7 @@ public class CityController {
         return json;
     }
     @RequestMapping(value = "city",method = RequestMethod.PUT)
-    public JSONObject updateCity(City city){
+    public JSONObject updateCity(@RequestBody City city){
         JSONObject json=new JSONObject();
        if(service.updateCity(city))
            json.put(CommonStatus.CityStatus, CommonStatus.Success);

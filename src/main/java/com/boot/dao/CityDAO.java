@@ -15,7 +15,7 @@ public interface CityDAO {
     @Insert("insert into city(name,state) values(#{name},#{state})")
     int addCity(City city);
 
-    @Update("update city set name=#{name} and state=#{state} where id=#{id}")
+    @Update("update city set name=#{name},state=#{state} where id=#{id}")
     int updateCityById(City city);
 
     @Delete("delete from city where id=#{id}")
