@@ -21,11 +21,14 @@ public class CityController {
        return json;
     }
     @RequestMapping(value = "city",method = RequestMethod.POST)
-    public JSONObject addCity(City city){
+    public JSONObject addCity(@RequestBody City city){
         JSONObject json=new JSONObject();
-        if(service.addCity(city)>=0){
-            json.put(CommonStatus.CityStatus,CommonStatus.Success);
-        }
+            if(service.addCity(city)>0){
+                json.put(CommonStatus.CityStatus,CommonStatus.Success);
+            }
+            else{
+                json.put(CommonStatus.CityStatus,CommonStatus.Error);
+            }
         return json;
     }
     @RequestMapping(value = "city",method = RequestMethod.PUT)
