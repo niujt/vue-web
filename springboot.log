@@ -1522,3 +1522,347 @@ org.apache.ibatis.binding.BindingException: Parameter 'username' not found. Avai
 2018-12-18 16:01:11.584 DEBUG 11900 --- [http-nio-9090-exec-5] c.boot.dao.LoginDAO.findUserByUsername   : ==>  Preparing: select * from login where username=? 
 2018-12-18 16:01:11.585 DEBUG 11900 --- [http-nio-9090-exec-5] c.boot.dao.LoginDAO.findUserByUsername   : ==> Parameters: (String)
 2018-12-18 16:01:11.587 DEBUG 11900 --- [http-nio-9090-exec-5] c.boot.dao.LoginDAO.findUserByUsername   : <==      Total: 0
+2018-12-18 19:54:05.857  INFO 2100 --- [main] com.boot.APPStart                        : Starting APPStart on DESKTOP-SR5AKN1 with PID 2100 (D:\woks\ideaworkspace\JsonDemo\target\classes started by Dell in D:\woks\ideaworkspace\JsonDemo)
+2018-12-18 19:54:05.872  INFO 2100 --- [main] com.boot.APPStart                        : No active profile set, falling back to default profiles: default
+2018-12-18 19:54:06.044  INFO 2100 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@299321e2: startup date [Tue Dec 18 19:54:06 CST 2018]; root of context hierarchy
+2018-12-18 19:54:07.731  INFO 2100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2018-12-18 19:54:07.809  INFO 2100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-18 19:54:07.809  INFO 2100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-12-18 19:54:07.841  INFO 2100 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2018-12-18 19:54:07.841  INFO 2100 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2018-12-18 19:54:07.841  INFO 2100 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2018-12-18 19:54:08.965  INFO 2100 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2018-12-18 19:54:09.200  INFO 2100 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-18 19:54:09.200  INFO 2100 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3156 ms
+2018-12-18 19:54:09.325  INFO 2100 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-12-18 19:54:09.340  INFO 2100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-18 19:54:09.340  INFO 2100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-18 19:54:09.340  INFO 2100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-18 19:54:09.340  INFO 2100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-18 19:54:10.293  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@299321e2: startup date [Tue Dec 18 19:54:06 CST 2018]; root of context hierarchy
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.getCityList()
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.addCity(com.boot.entity.City)
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[PUT]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.updateCity(com.boot.entity.City)
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city/{id}],methods=[DELETE]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.deleteCity(java.lang.Integer)
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city/{id}],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.getCity(java.lang.Integer)
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.UserController.getUsers()
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-18 19:54:10.356  INFO 2100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-18 19:54:10.387  INFO 2100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 19:54:10.387  INFO 2100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 19:54:10.418  INFO 2100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 19:54:10.680  INFO 2100 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-18 19:54:10.766  INFO 2100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2018-12-18 19:54:10.782  INFO 2100 --- [main] com.boot.APPStart                        : Started APPStart in 5.864 seconds (JVM running for 9.28)
+2018-12-18 19:55:07.005  INFO 2100 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-18 19:55:07.005  INFO 2100 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-18 19:55:07.019  INFO 2100 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2018-12-18 19:55:07.329 DEBUG 2100 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : ==>  Preparing: select * from login where username=? 
+2018-12-18 19:55:07.345 DEBUG 2100 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : ==> Parameters: xiaoming(String)
+2018-12-18 19:55:07.360 DEBUG 2100 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : <==      Total: 1
+2018-12-18 19:55:11.818 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 19:55:11.818 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 19:55:11.822 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : <==      Total: 7
+2018-12-18 19:55:11.823 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 19:55:11.823 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 19:55:11.824 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:30:50.228 DEBUG 2100 --- [http-nio-9090-exec-4] c.boot.dao.LoginDAO.findUserByUsername   : ==>  Preparing: select * from login where username=? 
+2018-12-18 20:30:50.238 DEBUG 2100 --- [http-nio-9090-exec-4] c.boot.dao.LoginDAO.findUserByUsername   : ==> Parameters: xiaoming(String)
+2018-12-18 20:30:50.244 DEBUG 2100 --- [http-nio-9090-exec-4] c.boot.dao.LoginDAO.findUserByUsername   : <==      Total: 1
+2018-12-18 20:30:56.152 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:30:56.153 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:30:56.157 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : <==      Total: 7
+2018-12-18 20:30:56.158 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:30:56.159 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:30:56.160 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:31:03.342 DEBUG 2100 --- [http-nio-9090-exec-7] com.boot.dao.CityDAO.deleteCityByid      : ==>  Preparing: delete from city where id=? 
+2018-12-18 20:31:03.342 DEBUG 2100 --- [http-nio-9090-exec-7] com.boot.dao.CityDAO.deleteCityByid      : ==> Parameters: 7(Integer)
+2018-12-18 20:31:03.352 DEBUG 2100 --- [http-nio-9090-exec-7] com.boot.dao.CityDAO.deleteCityByid      : <==    Updates: 1
+2018-12-18 20:31:03.667 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:31:03.668 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:31:03.672 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.findAll             : <==      Total: 6
+2018-12-18 20:31:03.673 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:31:03.673 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:31:03.674 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:31:04.475 DEBUG 2100 --- [http-nio-9090-exec-9] com.boot.dao.CityDAO.deleteCityByid      : ==>  Preparing: delete from city where id=? 
+2018-12-18 20:31:04.475 DEBUG 2100 --- [http-nio-9090-exec-9] com.boot.dao.CityDAO.deleteCityByid      : ==> Parameters: 6(Integer)
+2018-12-18 20:31:04.483 DEBUG 2100 --- [http-nio-9090-exec-9] com.boot.dao.CityDAO.deleteCityByid      : <==    Updates: 1
+2018-12-18 20:31:04.800 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:31:04.800 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:31:04.802 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.findAll             : <==      Total: 5
+2018-12-18 20:31:04.803 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:31:04.803 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:31:04.804 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:31:45.553 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:31:45.554 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:31:45.555 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.findAll             : <==      Total: 5
+2018-12-18 20:31:45.556 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:31:45.557 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:31:45.558 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:32:06.717 DEBUG 2100 --- [http-nio-9090-exec-2] com.boot.dao.CityDAO.addCity             : ==>  Preparing: insert into city(name,state) values(?,?) 
+2018-12-18 20:32:06.717 DEBUG 2100 --- [http-nio-9090-exec-2] com.boot.dao.CityDAO.addCity             : ==> Parameters: 江苏(String), 淮安(String)
+2018-12-18 20:32:06.727 DEBUG 2100 --- [http-nio-9090-exec-2] com.boot.dao.CityDAO.addCity             : <==    Updates: 1
+2018-12-18 20:32:06.937 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:32:06.938 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:32:06.939 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : <==      Total: 6
+2018-12-18 20:32:06.941 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:32:06.941 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:32:06.942 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:32:27.013 DEBUG 2100 --- [http-nio-9090-exec-5] com.boot.dao.CityDAO.addCity             : ==>  Preparing: insert into city(name,state) values(?,?) 
+2018-12-18 20:32:27.014 DEBUG 2100 --- [http-nio-9090-exec-5] com.boot.dao.CityDAO.addCity             : ==> Parameters: 江苏(String), 盐城(String)
+2018-12-18 20:32:27.024 DEBUG 2100 --- [http-nio-9090-exec-5] com.boot.dao.CityDAO.addCity             : <==    Updates: 1
+2018-12-18 20:32:27.270 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:32:27.271 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:32:27.272 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.findAll             : <==      Total: 7
+2018-12-18 20:32:27.273 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:32:27.273 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:32:27.274 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:49:09.857 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:49:09.858 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:49:09.860 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : <==      Total: 7
+2018-12-18 20:49:09.860 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:49:09.861 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:49:09.861 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:49:14.228 DEBUG 2100 --- [http-nio-9090-exec-7] com.boot.dao.CityDAO.addCity             : ==>  Preparing: insert into city(name,state) values(?,?) 
+2018-12-18 20:49:14.229 DEBUG 2100 --- [http-nio-9090-exec-7] com.boot.dao.CityDAO.addCity             : ==> Parameters: (String), (String)
+2018-12-18 20:49:14.239 DEBUG 2100 --- [http-nio-9090-exec-7] com.boot.dao.CityDAO.addCity             : <==    Updates: 1
+2018-12-18 20:49:14.548 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:49:14.548 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:49:14.549 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.findAll             : <==      Total: 8
+2018-12-18 20:49:14.550 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:49:14.550 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:49:14.551 DEBUG 2100 --- [http-nio-9090-exec-8] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:49:17.944 DEBUG 2100 --- [http-nio-9090-exec-9] com.boot.dao.CityDAO.deleteCityByid      : ==>  Preparing: delete from city where id=? 
+2018-12-18 20:49:17.944 DEBUG 2100 --- [http-nio-9090-exec-9] com.boot.dao.CityDAO.deleteCityByid      : ==> Parameters: 10(Integer)
+2018-12-18 20:49:17.952 DEBUG 2100 --- [http-nio-9090-exec-9] com.boot.dao.CityDAO.deleteCityByid      : <==    Updates: 1
+2018-12-18 20:49:18.261 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:49:18.262 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:49:18.263 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.findAll             : <==      Total: 7
+2018-12-18 20:49:18.264 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:49:18.264 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:49:18.265 DEBUG 2100 --- [http-nio-9090-exec-10] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:50:07.777 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:50:07.778 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:50:07.779 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.findAll             : <==      Total: 7
+2018-12-18 20:50:07.779 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:50:07.780 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:50:07.780 DEBUG 2100 --- [http-nio-9090-exec-1] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:50:11.933 DEBUG 2100 --- [http-nio-9090-exec-2] com.boot.dao.CityDAO.addCity             : ==>  Preparing: insert into city(name,state) values(?,?) 
+2018-12-18 20:50:11.934 DEBUG 2100 --- [http-nio-9090-exec-2] com.boot.dao.CityDAO.addCity             : ==> Parameters: (String), (String)
+2018-12-18 20:50:11.944 DEBUG 2100 --- [http-nio-9090-exec-2] com.boot.dao.CityDAO.addCity             : <==    Updates: 1
+2018-12-18 20:50:11.953 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:50:11.953 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:50:11.954 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.findAll             : <==      Total: 8
+2018-12-18 20:50:11.955 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:50:11.955 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:50:11.956 DEBUG 2100 --- [http-nio-9090-exec-3] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:50:15.254 DEBUG 2100 --- [http-nio-9090-exec-5] com.boot.dao.CityDAO.deleteCityByid      : ==>  Preparing: delete from city where id=? 
+2018-12-18 20:50:15.254 DEBUG 2100 --- [http-nio-9090-exec-5] com.boot.dao.CityDAO.deleteCityByid      : ==> Parameters: 11(Integer)
+2018-12-18 20:50:15.257 DEBUG 2100 --- [http-nio-9090-exec-5] com.boot.dao.CityDAO.deleteCityByid      : <==    Updates: 1
+2018-12-18 20:50:15.506 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:50:15.506 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:50:15.508 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.findAll             : <==      Total: 7
+2018-12-18 20:50:15.509 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:50:15.509 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:50:15.510 DEBUG 2100 --- [http-nio-9090-exec-4] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:53:35.958 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : ==>  Preparing: select * from city 
+2018-12-18 20:53:35.958 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : ==> Parameters: 
+2018-12-18 20:53:35.960 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.findAll             : <==      Total: 7
+2018-12-18 20:53:35.961 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : ==>  Preparing: select count(1) from city 
+2018-12-18 20:53:35.962 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : ==> Parameters: 
+2018-12-18 20:53:35.962 DEBUG 2100 --- [http-nio-9090-exec-6] com.boot.dao.CityDAO.getCount            : <==      Total: 1
+2018-12-18 20:59:40.298  INFO 12496 --- [main] com.boot.APPStart                        : Starting APPStart on DESKTOP-SR5AKN1 with PID 12496 (D:\woks\ideaworkspace\JsonDemo\target\classes started by Dell in D:\woks\ideaworkspace\JsonDemo)
+2018-12-18 20:59:40.301  INFO 12496 --- [main] com.boot.APPStart                        : No active profile set, falling back to default profiles: default
+2018-12-18 20:59:40.367  INFO 12496 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@43b6123e: startup date [Tue Dec 18 20:59:40 CST 2018]; root of context hierarchy
+2018-12-18 20:59:41.340  INFO 12496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2018-12-18 20:59:41.358  INFO 12496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-18 20:59:41.358  INFO 12496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-12-18 20:59:41.363  INFO 12496 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2018-12-18 20:59:41.363  INFO 12496 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2018-12-18 20:59:41.363  INFO 12496 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2018-12-18 20:59:42.406  INFO 12496 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2018-12-18 20:59:42.469  INFO 12496 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-18 20:59:42.469  INFO 12496 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2103 ms
+2018-12-18 20:59:42.562  INFO 12496 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-12-18 20:59:42.562  INFO 12496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-18 20:59:42.578  INFO 12496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-18 20:59:42.578  INFO 12496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-18 20:59:42.578  INFO 12496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-18 20:59:42.882  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@43b6123e: startup date [Tue Dec 18 20:59:40 CST 2018]; root of context hierarchy
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city/{id}],methods=[DELETE]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.deleteCity(java.lang.Integer)
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.getCityList()
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city/{id}],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.getCity(java.lang.Integer)
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.addCity(com.boot.entity.City)
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[PUT]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.updateCity(com.boot.entity.City)
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.UserController.getUsers()
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-18 20:59:42.913  INFO 12496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-18 20:59:42.929  INFO 12496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 20:59:42.929  INFO 12496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 20:59:42.960  INFO 12496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 20:59:43.131  INFO 12496 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-18 20:59:43.162  INFO 12496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2018-12-18 20:59:43.179  INFO 12496 --- [main] com.boot.APPStart                        : Started APPStart in 3.306 seconds (JVM running for 4.063)
+2018-12-18 21:01:08.673  INFO 12496 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-18 21:01:08.673  INFO 12496 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-18 21:01:08.687  INFO 12496 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2018-12-18 21:01:08.832 DEBUG 12496 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : ==>  Preparing: select * from login where username=? 
+2018-12-18 21:01:08.848 DEBUG 12496 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : ==> Parameters: 12121(String)
+2018-12-18 21:01:08.848 DEBUG 12496 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : <==      Total: 0
+2018-12-18 21:31:32.915  INFO 5448 --- [main] com.boot.APPStart                        : Starting APPStart on DESKTOP-SR5AKN1 with PID 5448 (D:\woks\ideaworkspace\JsonDemo\target\classes started by Dell in D:\woks\ideaworkspace\JsonDemo)
+2018-12-18 21:31:32.918  INFO 5448 --- [main] com.boot.APPStart                        : No active profile set, falling back to default profiles: default
+2018-12-18 21:31:32.961  INFO 5448 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71cf1b07: startup date [Tue Dec 18 21:31:32 CST 2018]; root of context hierarchy
+2018-12-18 21:31:33.800  INFO 5448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2018-12-18 21:31:33.816  INFO 5448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-18 21:31:33.816  INFO 5448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-12-18 21:31:33.821  INFO 5448 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2018-12-18 21:31:33.821  INFO 5448 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2018-12-18 21:31:33.821  INFO 5448 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2018-12-18 21:31:34.860  INFO 5448 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2018-12-18 21:31:34.924  INFO 5448 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-18 21:31:34.925  INFO 5448 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1963 ms
+2018-12-18 21:31:35.032  INFO 5448 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-12-18 21:31:35.035  INFO 5448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-18 21:31:35.035  INFO 5448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-18 21:31:35.035  INFO 5448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-18 21:31:35.035  INFO 5448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-18 21:31:35.358  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71cf1b07: startup date [Tue Dec 18 21:31:32 CST 2018]; root of context hierarchy
+2018-12-18 21:31:35.401  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city/{id}],methods=[DELETE]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.deleteCity(java.lang.Integer)
+2018-12-18 21:31:35.402  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city/{id}],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.getCity(java.lang.Integer)
+2018-12-18 21:31:35.402  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.addCity(com.boot.entity.City)
+2018-12-18 21:31:35.402  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[PUT]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.updateCity(com.boot.entity.City)
+2018-12-18 21:31:35.403  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.getCityList()
+2018-12-18 21:31:35.403  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-12-18 21:31:35.404  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/regist],methods=[PUT]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.RegistController.regist(com.boot.entity.Login)
+2018-12-18 21:31:35.404  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.UserController.getUsers()
+2018-12-18 21:31:35.408  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-18 21:31:35.409  INFO 5448 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-18 21:31:35.429  INFO 5448 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 21:31:35.430  INFO 5448 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 21:31:35.454  INFO 5448 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 21:31:35.569  INFO 5448 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-18 21:31:35.602  INFO 5448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2018-12-18 21:31:35.604  INFO 5448 --- [main] com.boot.APPStart                        : Started APPStart in 2.978 seconds (JVM running for 3.709)
+2018-12-18 21:31:44.940  INFO 5448 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-18 21:31:44.941  INFO 5448 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-18 21:31:44.952  INFO 5448 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2018-12-18 21:31:45.026  WARN 5448 --- [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.alibaba.fastjson.JSONObject com.boot.controller.RegistController.regist(com.boot.entity.Login)
+2018-12-18 21:33:20.073 DEBUG 5448 --- [http-nio-9090-exec-3] c.boot.dao.LoginDAO.findUserByUsername   : ==>  Preparing: select * from login where username=? 
+2018-12-18 21:33:20.084 DEBUG 5448 --- [http-nio-9090-exec-3] c.boot.dao.LoginDAO.findUserByUsername   : ==> Parameters: xiaoming(String)
+2018-12-18 21:33:20.094 DEBUG 5448 --- [http-nio-9090-exec-3] c.boot.dao.LoginDAO.findUserByUsername   : <==      Total: 1
+2018-12-18 21:33:27.506 DEBUG 5448 --- [http-nio-9090-exec-4] c.boot.dao.LoginDAO.findUserByUsername   : ==>  Preparing: select * from login where username=? 
+2018-12-18 21:33:27.507 DEBUG 5448 --- [http-nio-9090-exec-4] c.boot.dao.LoginDAO.findUserByUsername   : ==> Parameters: xiaoming11(String)
+2018-12-18 21:33:27.509 DEBUG 5448 --- [http-nio-9090-exec-4] c.boot.dao.LoginDAO.findUserByUsername   : <==      Total: 0
+2018-12-18 21:33:27.510 DEBUG 5448 --- [http-nio-9090-exec-4] com.boot.dao.LoginDAO.addLogin           : ==>  Preparing: insert into login(username,password) values(?,?) 
+2018-12-18 21:33:27.511 DEBUG 5448 --- [http-nio-9090-exec-4] com.boot.dao.LoginDAO.addLogin           : ==> Parameters: xiaoming11(String), 123456(String)
+2018-12-18 21:33:27.558 ERROR 5448 --- [http-nio-9090-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Mapper method 'com.boot.dao.LoginDAO.addLogin attempted to return null from a method with a primitive return type (int).] with root cause
+
+org.apache.ibatis.binding.BindingException: Mapper method 'com.boot.dao.LoginDAO.addLogin attempted to return null from a method with a primitive return type (int).
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:94) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59) ~[mybatis-3.4.6.jar:3.4.6]
+	at com.sun.proxy.$Proxy70.addLogin(Unknown Source) ~[na:na]
+	at com.boot.service.LoginService.regist(LoginService.java:29) ~[classes/:na]
+	at com.boot.controller.RegistController.regist(RegistController.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:892) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:664) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2018-12-18 21:34:23.909  INFO 12480 --- [main] com.boot.APPStart                        : Starting APPStart on DESKTOP-SR5AKN1 with PID 12480 (D:\woks\ideaworkspace\JsonDemo\target\classes started by Dell in D:\woks\ideaworkspace\JsonDemo)
+2018-12-18 21:34:23.912  INFO 12480 --- [main] com.boot.APPStart                        : No active profile set, falling back to default profiles: default
+2018-12-18 21:34:23.951  INFO 12480 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d3957fe: startup date [Tue Dec 18 21:34:23 CST 2018]; root of context hierarchy
+2018-12-18 21:34:24.805  INFO 12480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2018-12-18 21:34:24.822  INFO 12480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-18 21:34:24.823  INFO 12480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-12-18 21:34:24.827  INFO 12480 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2018-12-18 21:34:24.828  INFO 12480 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2018-12-18 21:34:24.828  INFO 12480 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2018-12-18 21:34:25.874  INFO 12480 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2018-12-18 21:34:25.936  INFO 12480 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-18 21:34:25.936  INFO 12480 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1986 ms
+2018-12-18 21:34:26.034  INFO 12480 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-12-18 21:34:26.038  INFO 12480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-18 21:34:26.038  INFO 12480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-18 21:34:26.038  INFO 12480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-18 21:34:26.038  INFO 12480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-18 21:34:26.354  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d3957fe: startup date [Tue Dec 18 21:34:23 CST 2018]; root of context hierarchy
+2018-12-18 21:34:26.390  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[PUT]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.updateCity(com.boot.entity.City)
+2018-12-18 21:34:26.391  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city/{id}],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.getCity(java.lang.Integer)
+2018-12-18 21:34:26.391  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.getCityList()
+2018-12-18 21:34:26.392  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city/{id}],methods=[DELETE]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.deleteCity(java.lang.Integer)
+2018-12-18 21:34:26.392  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/city],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.CityController.addCity(com.boot.entity.City)
+2018-12-18 21:34:26.392  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-12-18 21:34:26.393  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/regist],methods=[PUT]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.RegistController.regist(com.boot.entity.Login)
+2018-12-18 21:34:26.393  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.boot.controller.UserController.getUsers()
+2018-12-18 21:34:26.398  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-18 21:34:26.398  INFO 12480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-18 21:34:26.430  INFO 12480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 21:34:26.430  INFO 12480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 21:34:26.456  INFO 12480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-18 21:34:26.577  INFO 12480 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-18 21:34:26.609  INFO 12480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2018-12-18 21:34:26.613  INFO 12480 --- [main] com.boot.APPStart                        : Started APPStart in 3.048 seconds (JVM running for 3.876)
+2018-12-18 21:34:57.678  INFO 12480 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-18 21:34:57.679  INFO 12480 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-18 21:34:57.693  INFO 12480 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-12-18 21:34:57.883 DEBUG 12480 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : ==>  Preparing: select * from login where username=? 
+2018-12-18 21:34:57.894 DEBUG 12480 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : ==> Parameters: xiaoming11(String)
+2018-12-18 21:34:57.904 DEBUG 12480 --- [http-nio-9090-exec-1] c.boot.dao.LoginDAO.findUserByUsername   : <==      Total: 1
+2018-12-18 21:35:11.980 DEBUG 12480 --- [http-nio-9090-exec-2] c.boot.dao.LoginDAO.findUserByUsername   : ==>  Preparing: select * from login where username=? 
+2018-12-18 21:35:11.981 DEBUG 12480 --- [http-nio-9090-exec-2] c.boot.dao.LoginDAO.findUserByUsername   : ==> Parameters: xiaoming111(String)
+2018-12-18 21:35:11.982 DEBUG 12480 --- [http-nio-9090-exec-2] c.boot.dao.LoginDAO.findUserByUsername   : <==      Total: 0
+2018-12-18 21:35:11.983 DEBUG 12480 --- [http-nio-9090-exec-2] com.boot.dao.LoginDAO.addLogin           : ==>  Preparing: insert into login(username,password) values(?,?) 
+2018-12-18 21:35:11.984 DEBUG 12480 --- [http-nio-9090-exec-2] com.boot.dao.LoginDAO.addLogin           : ==> Parameters: xiaoming111(String), 123456(String)
+2018-12-18 21:35:11.993 DEBUG 12480 --- [http-nio-9090-exec-2] com.boot.dao.LoginDAO.addLogin           : <==    Updates: 1

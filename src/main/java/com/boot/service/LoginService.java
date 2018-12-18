@@ -20,4 +20,14 @@ public class LoginService {
         }
         return CommonStatus.Success;
     }
+    public String regist(Login login){
+        Login loginold=dao.findUserByUsername(login.getUsername());
+        if(loginold!=null){
+            return CommonStatus.RegistError;
+        }
+        else{
+            dao.addLogin(login);
+            return CommonStatus.Success;
+        }
+    }
 }

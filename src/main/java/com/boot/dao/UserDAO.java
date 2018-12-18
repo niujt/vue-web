@@ -15,5 +15,4 @@ public interface UserDAO {
             "from user u,city c " +
             "where u.addressid=c.id")
     List<User> findAll();
-
 }
