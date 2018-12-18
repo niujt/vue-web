@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 public class LoginService {
     @Autowired
     LoginDAO dao;
+//    public Login getLogin(String username){
+//        return  dao.findUserByUsername(username);
+//    }
     public String login(String username,String password){
         Login login=dao.findUserByUsername(username);
         if(login==null){

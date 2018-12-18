@@ -2,8 +2,6 @@ package com.boot.dao;
 
 import com.boot.entity.City;
 import org.apache.ibatis.annotations.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 @Mapper
