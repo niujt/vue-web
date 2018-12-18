@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.boot.Common.CommonStatus;
 import com.boot.entity.City;
 import com.boot.service.CityService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,13 +13,15 @@ import java.util.List;
 
 @RestController
 public class CityController {
+    private static Logger logger= LoggerFactory.getLogger(CityController.class);
     @Autowired
     private CityService service;
     @RequestMapping(value = "city",method = RequestMethod.GET)
     public JSONObject getCityList(){
-       List<City> citys=service.getCityList();
+        List<City> citys=service.getCityList();
        JSONObject json=new JSONObject();
        json.put("citys",citys);
+       json.put("count",service.getCount());
        return json;
     }
     @RequestMapping(value = "city",method = RequestMethod.POST)

@@ -11,6 +11,7 @@ import java.util.List;
 public class CityService {
     @Autowired
     CityDAO dao;
+    public int getCount(){return dao.getCount();}
     public List<City> getCityList() {
         return dao.findAll();
     }
