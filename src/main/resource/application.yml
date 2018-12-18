@@ -11,4 +11,6 @@ logging:
   file: springboot.log
   level:
     com.boot.dao: debug
+    com.boot.controller: debug
+    com.boot.service: debug
 
