@@ -1,6 +1,6 @@
 ### JsonDemo-web
 1. 技术:springboot2+ 、mybatis、jdk1.8+  
-```
+```java
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-parent</artifactId>
@@ -52,7 +52,7 @@
 >![Image text](imgs/2.png)   
 >![Image text](imgs/1.png)  
 3. 服务接口代码块部分展示(restful接口)：
-```
+```java
 //列表展示
 @RequestMapping(value = "city",method = RequestMethod.GET)
     public JSONObject getCityList(){
