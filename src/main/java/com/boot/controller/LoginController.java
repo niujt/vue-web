@@ -14,18 +14,22 @@ public class LoginController {
     @Autowired
     private LoginService service;
     @RequestMapping(value="/login",method = RequestMethod.GET)
-    public JSONObject login(@RequestParam("username") String username, @RequestParam("password") String password){
+    public JSONObject login(@RequestParam("username") String username, @RequestParam("password") String password,HttpSession session){
+        String status=service.login(username,password);
         JSONObject json=new JSONObject();
-            json.put(CommonStatus.LoginStatus,service.login(username,password));
+        json.put(CommonStatus.LoginStatus,status);
+        if (status=="success"){
+            session.setAttribute("login",service.getLogin(username));
+        }
         return json;
 
     }
-//    @RequestMapping(value="loginout",method = RequestMethod.GET)
-//    public JSONObject loginout(HttpSession session){
-//        JSONObject json=new JSONObject();
-//        session.removeAttribute("login");
-//        json.put(CommonStatus.LoginStatus,CommonStatus.LoginStatus2);
-//        return json;
-//    }
+    @RequestMapping(value="loginout",method = RequestMethod.GET)
+    public JSONObject loginout(HttpSession session){
+        JSONObject json=new JSONObject();
+        session.removeAttribute("login");
+        json.put(CommonStatus.LoginStatus,CommonStatus.LoginOut);
+        return json;
+    }
 
 }
