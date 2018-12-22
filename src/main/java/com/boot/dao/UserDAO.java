@@ -11,7 +11,7 @@ import java.util.List;
 @Mapper
 public interface UserDAO {
     @Select("select " +
-            "u.id as id,u.name as name,u.age as age,u.salary as salary,concat(c.name,c.state) as address " +
+            "u.*,concat(c.name,c.state) as address " +
             "from user u,city c " +
             "where u.addressid=c.id")
     List<User> findAll();

@@ -7,9 +7,13 @@ spring:
     username: root
     password: 123456
     type: org.apache.commons.dbcp.BasicDataSource
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 670482466@qq.com
+    password: gnbttuubmssqbaid
 logging:
   file: springboot.log
   level:
     com.boot.dao: debug
-
 
