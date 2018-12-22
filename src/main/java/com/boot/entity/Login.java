@@ -4,6 +4,7 @@ public class Login {
     private Integer id;
     private String username;
     private String password;
+    private String code;
 
     @Override
     public String toString() {
@@ -11,7 +12,16 @@ public class Login {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", code='" + code + '\'' +
                 '}';
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Integer getId() {

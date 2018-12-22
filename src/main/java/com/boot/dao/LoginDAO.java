@@ -2,10 +2,7 @@ package com.boot.dao;
 
 import com.boot.entity.Login;
 import com.boot.entity.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface LoginDAO {
@@ -13,5 +10,7 @@ public interface LoginDAO {
     Login findUserByUsername(@Param("username") String username);
     @Insert("insert into login(username,password) values(#{username},#{password})")
     int addLogin(Login login);
+    @Update("update login set password=#{password} where username=#{username}")
+    int updateLogin(Login login);
 
 }

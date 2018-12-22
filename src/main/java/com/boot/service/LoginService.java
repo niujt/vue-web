@@ -10,9 +10,22 @@ import org.springframework.stereotype.Service;
 public class LoginService {
     @Autowired
     LoginDAO dao;
+
+    /**
+     * 获取登录信息
+     * @param username
+     * @return
+     */
     public Login getLogin(String username){
         return  dao.findUserByUsername(username);
     }
+
+    /**
+     * 登录
+     * @param username
+     * @param password
+     * @return
+     */
     public String login(String username,String password){
         Login login=dao.findUserByUsername(username);
         if(login==null){
@@ -23,6 +36,12 @@ public class LoginService {
         }
         return CommonStatus.Success;
     }
+
+    /**
+     * 注册
+     * @param login
+     * @return
+     */
     public String regist(Login login){
         Login loginold=dao.findUserByUsername(login.getUsername());
         if(loginold!=null){
@@ -31,6 +50,14 @@ public class LoginService {
         else{
             dao.addLogin(login);
             return CommonStatus.Success;
+        }
+    }
+    public String updatePassword(Login login){
+        if(dao.updateLogin(login)>0){
+            return CommonStatus.Success;
+        }
+        else{
+            return CommonStatus.Error;
         }
     }
 }

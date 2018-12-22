@@ -60,9 +60,9 @@ public class LoginController {
      * @return 验证码+状态码
      */
     @RequestMapping(value="forgetPwd",method = RequestMethod.PUT)
-    public JSONObject forgetPwd(@RequestParam String email){
-        System.out.println(username);
-        System.out.println(email);
+    public JSONObject forgetPwd(@RequestParam String email,HttpSession session){
+        //System.out.println(username);
+        //System.out.println(email);
         JSONObject json=new JSONObject();
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         String code=SpringUtils.getRandomCode(); //随机生成验证码
@@ -73,6 +73,25 @@ public class LoginController {
         javaMailSender.send(simpleMailMessage);
         json.put(CommonStatus.SysStatus,CommonStatus.Success);
         json.put("code",code);
+        session.setAttribute("code",code);
+        return json;
+    }
+
+    /**
+     * 修改密码
+     * @param login
+     * @return
+     */
+    @RequestMapping(value = "updatePwd",method = RequestMethod.PUT)
+    public JSONObject updatePwd(@RequestBody Login login,HttpSession session){
+        JSONObject json=new JSONObject();
+        String code=(String)session.getAttribute("code");
+        if(login.getCode().equals(code)){
+            json.put(CommonStatus.LoginStatus,service.updatePassword(login));
+        }
+       else{
+            json.put(CommonStatus.LoginStatus,CommonStatus.Error);
+        }
         return json;
     }
 }
