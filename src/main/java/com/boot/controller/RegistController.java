@@ -14,6 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegistController {
     @Autowired
     private LoginService service;
+
+    /**
+     * 注册
+     * @param login
+     * @return
+     */
     @RequestMapping(value="regist",method = RequestMethod.PUT)
     public JSONObject regist(@RequestBody Login login){
         JSONObject json=new JSONObject();

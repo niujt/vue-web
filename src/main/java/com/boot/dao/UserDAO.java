@@ -10,6 +10,10 @@ import java.util.List;
 
 @Mapper
 public interface UserDAO {
+    /**
+     * 查询用户信息列表
+     * @return
+     */
     @Select("select " +
             "u.*,concat(c.name,c.state) as address " +
             "from user u,city c " +

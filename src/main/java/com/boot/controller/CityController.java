@@ -16,6 +16,11 @@ public class CityController {
     private static Logger logger= LoggerFactory.getLogger(CityController.class);
     @Autowired
     private CityService service;
+
+    /**
+     * 获取城市列表
+     * @return
+     */
     @RequestMapping(value = "city",method = RequestMethod.GET)
     public JSONObject getCityList(){
         List<City> citys=service.getCityList();
@@ -24,6 +29,12 @@ public class CityController {
        json.put("count",service.getCount());
        return json;
     }
+
+    /**
+     * 添加城市
+     * @param city
+     * @return
+     */
     @RequestMapping(value = "city",method = RequestMethod.POST)
     public JSONObject addCity(@RequestBody City city){
         JSONObject json=new JSONObject();
@@ -35,6 +46,12 @@ public class CityController {
             }
         return json;
     }
+
+    /**
+     * 修改城市
+     * @param city
+     * @return
+     */
     @RequestMapping(value = "city",method = RequestMethod.PUT)
     public JSONObject updateCity(@RequestBody City city){
         JSONObject json=new JSONObject();
@@ -45,6 +62,12 @@ public class CityController {
            json.put("CityStatus", CommonStatus.Error);
         return json;
     }
+
+    /**
+     * 删除城市
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "city/{id}",method = RequestMethod.DELETE)
     public JSONObject deleteCity(@PathVariable Integer id){
         JSONObject json=new JSONObject();
@@ -54,6 +77,12 @@ public class CityController {
             json.put(CommonStatus.CityStatus,CommonStatus.Error);
         return json;
     }
+
+    /**
+     * 根据id查找城市
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "city/{id}",method = RequestMethod.GET)
     public JSONObject getCity(@PathVariable Integer id){
         City city=service.findOne(id);

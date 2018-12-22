@@ -11,19 +11,53 @@ import java.util.List;
 public class CityService {
     @Autowired
     CityDAO dao;
+
+    /**
+     * 城市信息记录数
+     * @return
+     */
     public int getCount(){return dao.getCount();}
+
+    /**
+     * 城市信息列表
+     * @return
+     */
     public List<City> getCityList() {
         return dao.findAll();
     }
+
+    /**
+     * 添加城市
+     * @param city
+     * @return
+     */
     public int addCity(City city){
         return dao.addCity(city);
     }
+
+    /**
+     * 更新城市
+     * @param city
+     * @return
+     */
     public boolean updateCity(City city){
         return dao.updateCityById(city)!=0;
     }
+
+    /**
+     * 删除城市
+     * @param id
+     * @return
+     */
     public boolean deleteCity(Integer id){
         return dao.deleteCityByid(id)!=0;
     }
+
+    /**
+     * 根据id查询城市
+     * @param id
+     * @return
+     */
     public City findOne(Integer id){
         return dao.findById(id);
     }

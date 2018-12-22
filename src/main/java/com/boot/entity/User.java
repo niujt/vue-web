@@ -5,17 +5,28 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Date;
 
 public class User {
+    /**主键*/
     private Integer id;
+    /**姓名*/
     private String name;
+    /**头像路径*/
     private String iconheader;
+    /**邮箱*/
     private String email;
+    /**手机*/
     private String phone;
+    /**性别*/
     private int sex;
+    /**年龄*/
     private int age;
+    /**薪水*/
     private double salary;
+    /**地址id*/
     @JsonIgnore
     private Integer addressid;
+    /**地址（伪列）*/
     private String address;
+    /**创建时间*/
     private Date createtime;
 
     public String getIconheader() {

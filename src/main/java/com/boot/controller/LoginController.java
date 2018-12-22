@@ -92,6 +92,7 @@ public class LoginController {
        else{
             json.put(CommonStatus.LoginStatus,CommonStatus.Error);
         }
+       session.removeAttribute("code");
         return json;
     }
 }

@@ -12,6 +12,11 @@ import java.util.List;
 public class UserService {
     @Autowired
     private UserDAO dao;
+
+    /**
+     * 获取用户列表
+     * @return
+     */
     public List<User> getUserList(){
         return dao.findAll();
     }

@@ -1,8 +1,11 @@
 package com.boot.entity;
 
 public class City {
+    /**主键*/
     private Integer id;
+    /**省*/
     private String name;
+    /**市*/
     private String state;
 
     @Override

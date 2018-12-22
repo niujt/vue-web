@@ -52,6 +52,12 @@ public class LoginService {
             return CommonStatus.Success;
         }
     }
+
+    /**
+     * 更新密码
+     * @param login
+     * @return
+     */
     public String updatePassword(Login login){
         if(dao.updateLogin(login)>0){
             return CommonStatus.Success;
