@@ -45,6 +45,11 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.41</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <version>1.5.9.RELEASE</version>
+        </dependency>
     </dependencies>
 ```
 2. 数据库:mysql 5.7  
