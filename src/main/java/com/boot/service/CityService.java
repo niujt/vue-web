@@ -3,6 +3,9 @@ package com.boot.service;
 import com.boot.dao.CityDAO;
 import com.boot.entity.City;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,7 +43,7 @@ public class CityService {
      * @param city
      * @return
      */
-    //@CachePut(value = "city", key = "#root.args[0]", unless = "#city eq null ")
+    @CachePut(value = "city", key = "#root.args[0]", unless = "#city eq null ")
     public boolean updateCity(City city){
         return dao.updateCityById(city)!=0;
     }
@@ -50,7 +53,7 @@ public class CityService {
      * @param id
      * @return
      */
-    //@CacheEvict(value = "city", key = "#root.args[0]", condition = "#result eq true")
+    @CacheEvict(value = "city", key = "#root.args[0]", condition = "#result eq true")
     public boolean deleteCity(Integer id){
         return dao.deleteCityByid(id)!=0;
     }
@@ -60,7 +63,7 @@ public class CityService {
      * @param id
      * @return
      */
-    //@Cacheable(value = "city", key = "#root.args[0]", unless = "#result eq null ")
+    @Cacheable(value = "city", key = "#root.args[0]", unless = "#result eq null ")
     public City findOne(Integer id){
         return dao.findById(id);
     }

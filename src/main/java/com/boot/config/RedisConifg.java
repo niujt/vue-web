@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
@@ -26,7 +27,7 @@ import java.util.Set;
 
 @Configuration
 @EnableCaching
-@AutoConfigureAfter(RedisConifg.class)
+@AutoConfigureAfter(RedisAutoConfiguration.class)
 public class RedisConifg {
     @Value("${spring.redis.host}")
     private String host;
@@ -72,7 +73,7 @@ public class RedisConifg {
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory){
         //设置缓存有效期一分钟
         RedisCacheConfiguration redisCacheConfiguration=RedisCacheConfiguration.defaultCacheConfig();
-        redisCacheConfiguration.entryTtl(Duration.ofMinutes(1))
+        redisCacheConfiguration=redisCacheConfiguration.entryTtl(Duration.ofMinutes(1))
         //key为String序列化
             .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
         //value为json 序列化

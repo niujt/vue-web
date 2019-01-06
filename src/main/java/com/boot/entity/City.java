@@ -1,6 +1,6 @@
 package com.boot.entity;
 
-public class City {
+public class City{
     /**主键*/
     private Integer id;
     /**城市*/
