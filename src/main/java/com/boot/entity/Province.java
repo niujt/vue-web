@@ -1,12 +1,12 @@
 package com.boot.entity;
 
-public class City {
+/**
+ * 省份
+ */
+
+public class Province {
     /**主键*/
     private Integer id;
-    /**城市*/
-    private String cityname;
-    /**省id*/
-    private Integer provinceid;
     /**省*/
     private String provincename;
 
@@ -16,22 +16,6 @@ public class City {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getCityname() {
-        return cityname;
-    }
-
-    public void setCityname(String cityname) {
-        this.cityname = cityname;
-    }
-
-    public Integer getProvinceid() {
-        return provinceid;
-    }
-
-    public void setProvinceid(Integer provinceid) {
-        this.provinceid = provinceid;
     }
 
     public String getProvincename() {
@@ -44,10 +28,8 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" +
+        return "Province{" +
                 "id=" + id +
-                ", cityname='" + cityname + '\'' +
-                ", provinceid=" + provinceid +
                 ", provincename='" + provincename + '\'' +
                 '}';
     }

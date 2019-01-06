@@ -1,5 +1,9 @@
 package com.boot.util;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -18,7 +22,20 @@ public class SpringUtils {
     return sb.toString();
 
     }
+
+    /**
+     * md5加密
+     * @param data
+     * @return
+     */
+    public static String MD5(String data){
+        return DigestUtils.md5Hex(data);
+    }
+   public static String Date2String(Date date){
+       SimpleDateFormat sdf=new SimpleDateFormat("YYYY/MM/dd");
+       return sdf.format(date);
+   }
 //    public static void main(String[] args){
-//       System.out.println(SpringUtils.getRandomCode());
+//       System.out.println(MD5("123456"));
 //    }
 }

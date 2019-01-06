@@ -5,7 +5,6 @@ import com.boot.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Service
@@ -19,5 +18,8 @@ public class UserService {
      */
     public List<User> getUserList(){
         return dao.findAll();
+    }
+    public User getUserByLoginid(Integer id){
+        return dao.findUserByLoginid(id);
     }
 }

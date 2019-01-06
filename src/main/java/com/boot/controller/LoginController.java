@@ -30,7 +30,7 @@ public class LoginController {
      */
     @RequestMapping(value="/login",method = RequestMethod.GET)
     public JSONObject login(@RequestParam("username") String username, @RequestParam("password") String password,HttpSession session){
-        String status=service.login(username,password);
+        String status=service.login(username,SpringUtils.MD5(password));
         JSONObject json=new JSONObject();
         json.put(CommonStatus.LoginStatus,status);
         if (status=="success"){

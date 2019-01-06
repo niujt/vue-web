@@ -1,7 +1,6 @@
 package com.boot.dao;
 
 import com.boot.entity.Login;
-import com.boot.entity.User;
 import org.apache.ibatis.annotations.*;
 
 @Mapper

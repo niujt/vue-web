@@ -3,6 +3,7 @@ package com.boot.service;
 import com.boot.Common.CommonStatus;
 import com.boot.dao.LoginDAO;
 import com.boot.entity.Login;
+import com.boot.util.SpringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,6 +49,7 @@ public class LoginService {
             return CommonStatus.RegistError;
         }
         else{
+            login.setPassword(SpringUtils.MD5(login.getPassword()));
             dao.addLogin(login);
             return CommonStatus.Success;
         }
@@ -60,6 +62,7 @@ public class LoginService {
      */
     public String updatePassword(Login login){
         if(dao.updateLogin(login)>0){
+            login.setPassword(SpringUtils.MD5(login.getPassword()));
             return CommonStatus.Success;
         }
         else{

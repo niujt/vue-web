@@ -17,7 +17,7 @@ public interface CityDAO {
      * 查询所有城市记录
      * @return
      */
-    @Select("select * from city")
+    @Select("select c.id,p.provincename as provincename,c.cityname as cityname from city c,province p where p.id=c.provinceid order by p.provincename")
     List<City> findAll();
 
     /**
@@ -33,7 +33,7 @@ public interface CityDAO {
      * @param city
      * @return
      */
-    @Insert("insert into city(name,state) values(#{name},#{state})")
+    @Insert("insert into city(cityname,provinceid) values(#{cityname},#{provinceid})")
     int addCity(City city);
 
     /**
@@ -41,7 +41,7 @@ public interface CityDAO {
      * @param city
      * @return
      */
-    @Update("update city set name=#{name},state=#{state} where id=#{id}")
+    @Update("update city set cityname=#{cityname},provinceid=#{provinceid} where id=#{id}")
     int updateCityById(City city);
 
     /**

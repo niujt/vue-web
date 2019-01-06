@@ -1,14 +1,12 @@
 package com.boot.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.boot.Common.CommonStatus;
 import com.boot.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 
@@ -26,7 +24,6 @@ public class UserController {
     public JSONObject getUsers(){
         JSONObject json=new JSONObject();
         json.put("users",service.getUserList());
-        //System.out.println(session.getAttribute("login"));
         return json;
     }
 
@@ -71,8 +68,18 @@ public class UserController {
         catch (Exception e){
             e.printStackTrace();
         }
+        return json;
+    }
 
-
+    /**
+     * 根据登录id获取用户信息
+     * @param id
+     * @return
+     */
+    @RequestMapping(value="user1/{loginid}",method = RequestMethod.GET)
+    public JSONObject getUserByLogin(@PathVariable Integer loginid){
+        JSONObject json=new JSONObject();
+        json.put(CommonStatus.LoginUserStatus,service.getUserByLoginid(loginid));
         return json;
     }
 }

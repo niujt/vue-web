@@ -5,6 +5,9 @@ public class CommonStatus {
     public static String SysStatus="SysStatus";
     /** 城市状态码*/
     public static String CityStatus="CityStatus";
+    /** 省份状态码*/
+    public static String ProvinceStatus="ProvinceStatus";
+    public static String LoginUserStatus="LoginUserStatus";
     /**登录状态码*/
     public static String LoginStatus="LoginStatus";
     /**注册状态码*/

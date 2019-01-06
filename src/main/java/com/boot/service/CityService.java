@@ -40,6 +40,7 @@ public class CityService {
      * @param city
      * @return
      */
+    //@CachePut(value = "city", key = "#root.args[0]", unless = "#city eq null ")
     public boolean updateCity(City city){
         return dao.updateCityById(city)!=0;
     }
@@ -49,6 +50,7 @@ public class CityService {
      * @param id
      * @return
      */
+    //@CacheEvict(value = "city", key = "#root.args[0]", condition = "#result eq true")
     public boolean deleteCity(Integer id){
         return dao.deleteCityByid(id)!=0;
     }
@@ -58,6 +60,7 @@ public class CityService {
      * @param id
      * @return
      */
+    //@Cacheable(value = "city", key = "#root.args[0]", unless = "#result eq null ")
     public City findOne(Integer id){
         return dao.findById(id);
     }
