@@ -61,8 +61,8 @@ public class LoginService {
      * @return
      */
     public String updatePassword(Login login){
+        login.setPassword(SpringUtils.MD5(login.getPassword()));
         if(dao.updateLogin(login)>0){
-            login.setPassword(SpringUtils.MD5(login.getPassword()));
             return CommonStatus.Success;
         }
         else{
