@@ -1,10 +1,7 @@
 package com.boot.dao;
 
 import com.boot.entity.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -31,8 +28,8 @@ public interface UserDAO {
      * @return
      */
     @Update("update user " +
-            "set name=#{name},phone=#{phone},age=#{age},deptpositionid=#{deptpositionid},sex=#{sex},addressid=#{addressid} " +
-            "where id=#{id}")
+            "set name=#{name},phone=#{phone},email=#{email},salary=#{salary},age=#{age},deptpositionid=#{deptpositionid},sex=#{sex},addressid=#{addressid} " +
+            "where loginid=#{loginid}")
     int updateUser1(User user);
 
     /**
@@ -42,8 +39,8 @@ public interface UserDAO {
      */
     @Update("update user " +
             "set education1=#{education1},education2=#{education2},education3=#{education3},education4=#{education4},ishigheducation=#{ishigheducation}" +
-            "where id=#{id}")
-    int updateUser2(User user);
+            " where loginid=#{loginid}")
+    int updateUser3(User user);
     /**
      * 更新用户头像
      * @param user
@@ -51,17 +48,14 @@ public interface UserDAO {
      */
     @Update("update user " +
             "set iconhead=#{iconhead}" +
-            "where id=#{id}")
-    int updateUser3(User user);
+            " where loginid=#{loginid}")
+    int updateUser2(User user);
 
     /**
      * 添加用户信息
-     * @param user
+     * @param loginid
      * @return
      */
-    @Insert("insert into user " +
-            "values(#{loginid},#{name},#{iconhead},#{email},#{phone},#{sex},#{age},#{salary}" +
-            ",#{education1},#{education2},#{education3},#{education4}" +
-            ",#{ishigheducation},#{deptpositionid},#{addressid},now())")
-    int addUser(User user);
+    @Insert("insert into user(loginid,createtime) values(#{loginid},now())")
+    int addUser(@Param("loginid") Integer loginid);
 }

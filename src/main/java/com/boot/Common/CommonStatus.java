@@ -7,7 +7,10 @@ public class CommonStatus {
     public static String CityStatus="CityStatus";
     /** 省份状态码*/
     public static String ProvinceStatus="ProvinceStatus";
+    /**登录用户状态码*/
     public static String LoginUserStatus="LoginUserStatus";
+    /**用户状态码*/
+    public static String UserStatus="UserStatus";
     /**登录状态码*/
     public static String LoginStatus="LoginStatus";
     /**注册状态码*/

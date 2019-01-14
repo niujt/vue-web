@@ -41,6 +41,7 @@ public class User {
     private Integer addressid;
     /**地址（伪列）*/
     private String address;
+    @JsonIgnore
     /**创建时间*/
     private Date createtime;
     /**登录id*/

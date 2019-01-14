@@ -1,5 +1,6 @@
 package com.boot.service;
 
+import com.boot.Common.CommonStatus;
 import com.boot.dao.UserDAO;
 import com.boot.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,17 +33,43 @@ public class UserService {
 
     /**
      * 添加用户信息
-     * @param user
-     * @param id
+     * @param loginid
      * @return
      */
-    public int addUser(User user,Integer id){
-        if(id==null){
-            return userdao.addUser(user);
+    public int addUser(Integer loginid){
+        if(userdao.findUserByLoginid(loginid)==null){
+            return userdao.addUser(loginid);
         }
         else{
            return 0;
         }
 
+    }
+
+    /**
+     * 更新基本信息
+     * @param user
+     * @return
+     */
+    public String UpdateUser1(User user){
+        return userdao.updateUser1(user)>0? CommonStatus.Success:CommonStatus.Error;
+    }
+
+    /**
+     * 更新头像
+     * @param user
+     * @return
+     */
+    public String UpdateUser2(User user){
+        return userdao.updateUser2(user)>0? CommonStatus.Success:CommonStatus.Error;
+    }
+
+    /**
+     * 更新学历
+     * @param user
+     * @return
+     */
+    public String UpdateUser3(User user){
+        return userdao.updateUser3(user)>0? CommonStatus.Success:CommonStatus.Error;
     }
 }
