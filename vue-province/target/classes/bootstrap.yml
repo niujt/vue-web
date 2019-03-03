@@ -1,0 +1,21 @@
+#服务端口
+server:
+  port: 8083
+  #eureka主机名，会在控制页面中显示
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  #服务名
+spring:
+  cloud:
+    config:
+      uri: http://localhost:7001/eureka/
+  application:
+    name: province-server
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: njt123
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&useSSL=true
