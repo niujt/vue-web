@@ -12,6 +12,7 @@
     <module>vue-city</module>
     <module>vue-common</module>
     <module>vue-login</module>
+    <module>vue-user</module>
   </modules>
   <packaging>pom</packaging>
 
