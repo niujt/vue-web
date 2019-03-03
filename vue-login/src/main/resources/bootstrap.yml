@@ -1,0 +1,38 @@
+#服务端口
+server:
+  port: 8081
+  #eureka主机名，会在控制页面中显示
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  #服务名
+spring:
+  cloud:
+    config:
+      uri: http://localhost:7001/eureka/
+  application:
+    name: login-server
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: njt123
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&useSSL=true
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 670482466@qq.com
+    password: gnbttuubmssqbaid
+    redis:
+      database: 0
+      host: localhost
+      port: 6379
+      password:
+      jedis:
+        pool:
+          max-active: 8
+          max-wait: -1
+          max-idle: 8
+          min-idle: 0
+      timeout: 5000
